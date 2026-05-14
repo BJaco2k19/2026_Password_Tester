@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Password Strength Tester</title>
+    <style>
+      body{font-family:system-ui,Segoe UI,Arial;padding:2rem}
+      .box{max-width:720px;margin:0 auto}
+      .result{background:#f6f8fa;padding:1rem;border-radius:6px}
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h1>Password Strength Tester</h1>
+      <form method="post">
+        <label>Password: <input type="password" name="password" value=""></label>
+        <button type="submit">Score</button>
+      </form>
+
+      {% if result %}
+      <h2>Result</h2>
+      <div class="result">
+        <p><strong>Score:</strong> {{ result.score }} / 100</p>
+        {% if result.components %}
+        <p><strong>Components:</strong></p>
+        <ul>
+          <li>Length: {{ result.components.length.score }} — {{ result.components.length.classification }}</li>
+          <li>Complexity: {{ result.components.complexity.score }} — {{ result.components.complexity.classification }}</li>
+        </ul>
+        {% endif %}
+        {% if result.suggestions %}
+        <p><strong>Suggestions:</strong></p>
+        <ul>
+          {% for s in result.suggestions %}
+          <li>{{ s }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+      {% endif %}
+    </div>
+  </body>
+</html>
