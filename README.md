@@ -75,15 +75,3 @@ pip install -r requirements.txt
 pytest -q
 ```
 
-## Publishing On GitHub
-
-Before pushing this repository, replace `BJaco2k19` in `pyproject.toml` and this README with your GitHub account or organization name, then publish the project with:
-
-```bash
-git init
-git add .
-git commit -m "Initial password strength tester"
-git branch -M main
-git remote add origin https://github.com/BJaco2k19/password-strength.git
-git push -u origin main
-```
