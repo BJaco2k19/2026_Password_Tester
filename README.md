@@ -1,4 +1,4 @@
-# Password Strength Tester
+# Password Strength Tester, Inspired in and primarily written by Me, with some extra eyes-on from Copilot
 
 [![CI](https://github.com/BJaco2k19/password-strength/actions/workflows/ci.yml/badge.svg)](https://github.com/BJaco2k19/password-strength/actions/workflows/ci.yml)
 
