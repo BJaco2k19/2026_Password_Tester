@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.8"
 license = { text = "MIT" }
 keywords = ["password", "security", "strength"]
-authors = [ { name = "dwolf" } ]
+authors = [ { name = "Bradley Jacobs" } ]
 dependencies = [
   "flask"
 ]
